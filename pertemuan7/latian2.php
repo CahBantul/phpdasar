@@ -1,3 +1,10 @@
+<?php 
+if (!isset($_GET["nama"])||!isset($_GET["gambar"])|| !isset($_GET["email"])|| !isset($_GET["alamat"]) || !isset($_GET["noHP"])) {
+  // redirect
+  header("Location: latian1.php");
+  exit;
+};
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,5 +21,6 @@
     <li><?= $_GET["noHP"]; ?> </li>
     <li><?= $_GET["email"]; ?> </li>
   </ul>
+  <a href="latian1.php">kembali ke halaman kontak</a>
 </body>
 </html>
